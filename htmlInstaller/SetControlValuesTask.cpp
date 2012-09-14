@@ -68,7 +68,7 @@ void SetControlValuesTask::exec(htmlayout::dom::element elt)
 					InstallerSession::Instance->AdditionalControlArgs[id] = value;
 				}
 			}
-			else if (0 == wcscmp(type, L"text"))
+			else if (0 == wcscmp(type, L"text") || (0 == wcscmp(type, L"password"))
 			{
 				std::wstring value = elt.get_value().to_string();
 				LOG(L"--- Setting user-defined edit value '" << id << L"'=" << value);
